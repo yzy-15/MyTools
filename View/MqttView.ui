@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MqttView</class>
+ <widget class="QWidget" name="MqttView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1382</width>
+    <height>815</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4" rowstretch="0,0" columnstretch="3,1">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>消息记录</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout" rowstretch="1">
+      <item row="0" column="0" colspan="2">
+       <widget class="QTextBrowser" name="textBrowser"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>发送消息</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3" columnstretch="4,0">
+      <item row="6" column="1">
+       <widget class="QPushButton" name="send_pushButton">
+        <property name="text">
+         <string>发送</string>
+        </property>
+        <property name="shortcut">
+         <string>Ctrl+Return</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="qos_spinBox">
+        <property name="maximum">
+         <number>2</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" rowspan="7">
+       <widget class="QPlainTextEdit" name="plainTextEdit"/>
+      </item>
+      <item row="4" column="1">
+       <widget class="QCheckBox" name="regularlySend_checkBox">
+        <property name="text">
+         <string>定时发送</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Qos</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QSpinBox" name="timeInterval_spinBox">
+        <property name="specialValueText">
+         <string/>
+        </property>
+        <property name="suffix">
+         <string> ms</string>
+        </property>
+        <property name="prefix">
+         <string/>
+        </property>
+        <property name="maximum">
+         <number>10000000</number>
+        </property>
+        <property name="singleStep">
+         <number>100</number>
+        </property>
+        <property name="stepType">
+         <enum>QAbstractSpinBox::DefaultStepType</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>发布Topic</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="pubTopic_lineEdit"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="2">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>服务器信息</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="15" column="0">
+       <widget class="QPushButton" name="clearRecive_pushButton">
+        <property name="text">
+         <string>清空接收</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="1">
+       <widget class="QPushButton" name="saveRecive_pushButton">
+        <property name="text">
+         <string>保存数据</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="1">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>端口号</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>用户名：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="18" column="0" colspan="2">
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>已订阅Topic</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="2" column="3">
+          <widget class="QPushButton" name="deleteTopic_pushButton">
+           <property name="text">
+            <string>删除</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="4">
+          <widget class="QListView" name="subTopicList_listView"/>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="10" column="1">
+       <widget class="QLineEdit" name="password_lineEdit"/>
+      </item>
+      <item row="14" column="1">
+       <widget class="QSpinBox" name="port_spinBox">
+        <property name="maximum">
+         <number>65535</number>
+        </property>
+        <property name="value">
+         <number>1883</number>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLineEdit" name="host_lineEdit">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="0">
+       <widget class="QCheckBox" name="pauseDisplay_checkBox">
+        <property name="text">
+         <string>暂停显示</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>MQTT地址：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLineEdit" name="user_lineEdit"/>
+      </item>
+      <item row="9" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>密码：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="1">
+       <widget class="QPushButton" name="connect_pushButton">
+        <property name="text">
+         <string>连接</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="0">
+       <widget class="QLineEdit" name="addTopic_lineEdit"/>
+      </item>
+      <item row="17" column="1">
+       <widget class="QPushButton" name="addTopic_pushButton">
+        <property name="text">
+         <string>添加订阅</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>user_lineEdit</tabstop>
+  <tabstop>password_lineEdit</tabstop>
+  <tabstop>host_lineEdit</tabstop>
+  <tabstop>port_spinBox</tabstop>
+  <tabstop>connect_pushButton</tabstop>
+  <tabstop>clearRecive_pushButton</tabstop>
+  <tabstop>saveRecive_pushButton</tabstop>
+  <tabstop>pauseDisplay_checkBox</tabstop>
+  <tabstop>addTopic_lineEdit</tabstop>
+  <tabstop>addTopic_pushButton</tabstop>
+  <tabstop>subTopicList_listView</tabstop>
+  <tabstop>deleteTopic_pushButton</tabstop>
+  <tabstop>pubTopic_lineEdit</tabstop>
+  <tabstop>qos_spinBox</tabstop>
+  <tabstop>regularlySend_checkBox</tabstop>
+  <tabstop>timeInterval_spinBox</tabstop>
+  <tabstop>send_pushButton</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>plainTextEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>clearRecive_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>textBrowser</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1076</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>752</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

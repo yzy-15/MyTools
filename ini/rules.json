@@ -1,0 +1,20 @@
+{
+    "规则说明": {
+        "Type": "文件类型列表，以列表形式列举所有需要统计的文件格式",
+        "LineComment": "行注释，以列表形式列举出所有的行注释符号",
+        "ParagraphComment": "段注释，二维数组，数组的每一行列举出段注释的开头和结尾",
+        "Ignore": "忽略文件：以列表形式列举出需要忽略的文件列表，目前只支持文件全名"
+    },
+    "C/C++": {
+        "Type": ["*.h", "*.c", "*.cpp", "*.cc"],
+        "LineComment": ["//"],
+        "ParagraphComment": [["/*", "*/"]],
+        "Ignore": [""]
+    },
+    "Python": {
+        "Type": ["*.py", "*.pyw", "*.pyi"],
+        "LineComment": ["#"],
+        "ParagraphComment": [["'''", "'''"], ["\"\"\"", "\"\"\""]],
+        "Ignore": ["__init__.py"]
+    }
+}
